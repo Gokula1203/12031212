@@ -101,9 +101,10 @@ arrows: true,
 dots: true,
 infinite: true,
 slidesToShow:1,
+speed:500,
 slidesToScroll: 1,
 initialSlide:0,
-speed:500,
+
 previousArrow : <PrevArrow />,
 nextArrow: <NextArrow />
 }
@@ -115,9 +116,9 @@ nextArrow: <NextArrow />
         <div className='lg:hidden'>
             <HeroSlider {...settings}>
                 {
-                    images.map((images)=>(
-                        <div className='w-full h-56 md:h-80 py-3'>
-                            <img src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`} alt="hero bannner" className='w-full h-full rounded-md object-cover object-center' />
+                    images.map((images,index)=>(
+                        <div className='w-full h-56 md:h-80 py-3' key={index}>
+                            <img src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`} alt="hero bannner" className='w-full h-full rounded-md object-cover object-center'  />
                         </div>
                     ))
                 }
@@ -126,8 +127,8 @@ nextArrow: <NextArrow />
         <div className='hidden lg:block'>
              <HeroSlider {...settingsLG}>
                 {
-                    images.map((images)=>(
-                        <div className='w-full h-60 md:h-80 overflow-hidden'>
+                    images.map((images,index)=>(
+                        <div className='w-full h-60 md:h-80 overflow-hidden' key={index}>
                             <img src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`} alt="hero bannner" className='w-full h-full rounded-md object-cover object-center' />
                         </div>
                     ))

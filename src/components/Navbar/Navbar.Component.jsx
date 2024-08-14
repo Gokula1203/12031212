@@ -6,7 +6,7 @@ function NavSm(){
         <div className='text-white flex items-center justify-between'>
             <div>
                 <h3 className='text-xl font-bold'>It All Starts Here!</h3>
-                <span className='text-gray-400 text-xs flex items-center cursor-pointer hover:text-white' >Bangalore <BiChevronDown /> </span>
+                <span className='text-gray-400 text-xs flex items-center cursor-pointer hover:text-white' >Mumbai <BiChevronDown /> </span>
 
             </div>
             <div className='w-8 h-8'>
@@ -35,7 +35,14 @@ function NavLg(){
                 </div>
                 <div className='w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md'>
                     <BiSearch />
-                    {/* <input type="search" className=''/> */}
+                    <input type="search" className='w-full bg-transparent border-none focus:outline-none' placeholder='search for movies and all activities' />
+                </div>
+            </div>
+            <div className='flex items-center gap-3'>
+                <span className='text-gray-200'> Mumbai <BiChevronDown /></span>
+                <button className='bg-red-500 text-white  px-2 py-1 text-sm rounded'>Sign In</button>
+                <div className='w-8 h-8 text-white'>
+                    <BiMenu className='w-full h-full' />
                 </div>
             </div>
         </div>
@@ -45,7 +52,17 @@ function NavLg(){
 // Main Component
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+   <nav className='bg-darkBackground-700 px-4 py-3'>
+<div className='md:hidden'>
+<NavSm />
+</div>
+<div className='hidden md:flex lg:hidden'>
+<NavMd />
+</div>
+<div className='hidden md:hidden lg:flex'>
+<NavLg /> 
+</div>
+   </nav>
   )
 }
 
