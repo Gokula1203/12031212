@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import HeroSlider from "react-slick";
-import { NextArrow,PrevArrow } from './Arrows.Component';
 
 const HeroCarousel = () => {
 
@@ -93,8 +92,7 @@ const settings ={
   slidesToScroll: 1,
   initialSlide:0,
   speed: 500,
-  previousArrow : <PrevArrow />,
-  nextArrow: <NextArrow />
+
 }
 const settingsLG = {
 arrows: true,
@@ -105,8 +103,7 @@ speed:500,
 slidesToScroll: 1,
 initialSlide:0,
 
-previousArrow : <PrevArrow />,
-nextArrow: <NextArrow />
+
 }
 
 
